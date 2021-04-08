@@ -3,7 +3,7 @@ const twitter = require("twitter-lite");
 const client = new twitter(config);
 const fetch = require("node-fetch");
 
-setTimeout(() => {
+setInterval(() => {
   fetch("https://coronavirusapi-france.now.sh/FranceLiveGlobalData")
     .then((response) => {
       return response.json();
@@ -19,4 +19,4 @@ setTimeout(() => {
         })
         .catch(console.error);
     });
-}, 86400);
+}, 84600);
